@@ -44,4 +44,7 @@ group :test do
   gem "rack-test", "~> 1.1"
 end
 
-
+desc "Start the server"
+task :server do
+  exec "rerun -b 'rackup config.ru'"
+end
